@@ -93,7 +93,6 @@ public class AuthenticatedOfferCreateService implements AbstractCreateService<Au
 
 		Calendar calendar;
 		Date minimumDeadline;
-		Offer existing;
 
 		if (!errors.hasErrors("deadline")) {
 			calendar = new GregorianCalendar();
