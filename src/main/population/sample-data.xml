@@ -369,7 +369,7 @@
 <property name="userAccount" ref="employer1UserAccount" />
 </bean>
 
-<bean id="job1" class="acme.entities.jobs.Job">
+<bean name="job1" class="acme.entities.jobs.Job">
 <property name= "reference" value="EMP1-JOB1"/>
 <property name= "title" value="Title 1 "/>
 <property name= "deadline" value="2021/11/28 10:30"/>
@@ -377,10 +377,10 @@
 <property name= "description" value="Description example"/>
 <property name= "moreInfo" value="http://www.example.com"/>
 <property name= "finalMode" value="true"/>
-<property name= "employer" value="employer1Employer"/>
+<property name= "employer" ref="employer1Employer"/>
 </bean>
 
-<bean id="job2" class="acme.entities.jobs.Job">
+<bean name="job2" class="acme.entities.jobs.Job">
 <property name= "reference" value="EMP1-JOB12"/>
 <property name= "title" value="Title 2 "/>
 <property name= "deadline" value="2022/11/28 10:30"/>
@@ -388,7 +388,7 @@
 <property name= "description" value="Description example 2"/>
 <property name= "moreInfo" value="http://www.example.com"/>
 <property name= "finalMode" value="true"/>
-<property name= "employer" value="employer1Employer"/>
+<property name= "employer" ref="employer1Employer"/>
 </bean>
 
 </beans>
