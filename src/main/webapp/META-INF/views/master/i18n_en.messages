@@ -104,6 +104,10 @@ master.menu.provider = Provider
 
 master.menu.consumer = Consumer
 
+###### employer################################################################
+master.menu.employer= Employer
+master.menu.job.list = List jobs
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Account

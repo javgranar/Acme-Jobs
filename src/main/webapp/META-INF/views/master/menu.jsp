@@ -73,7 +73,12 @@
 		
 		
 		</acme:menu-option>
-			
+		
+		<!---------------------------- EMPLOYER  --------------------------------------->
+		<acme:menu-option code="master.menu.employer" access="hasRole('Employer')">			
+		<acme:menu-suboption code="master.menu.job.list" action="/employer/job/list_mine" />
+		</acme:menu-option>
+		
 		<!----------------------------- CONSUMER --------------------------------------->
 		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')">
 			<acme:menu-suboption code="master.menu.offer.create" action="/authenticated/offer/create" />

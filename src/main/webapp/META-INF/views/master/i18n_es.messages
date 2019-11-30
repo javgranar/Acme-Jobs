@@ -95,7 +95,7 @@ master.menu.administrator.shutdown = Parar el sistema
 master.menu.configurations = Configuración
 master.menu.configuration.list = Configuraciones
 
-master.menu.challenge.list = Listar Retos
+master.menu.challenge.list = Mostrar Retos
 master.menu.challenge.form = Crear Retos
 
 # master.menu.provider ########################################################
@@ -105,6 +105,10 @@ master.menu.provider = Proveedor
 # master.menu.consumer ##########################################################
 
 master.menu.consumer = Consumidor
+
+###### employer################################################################
+master.menu.employer= Empleador
+master.menu.job.list = Mostrar trabajos
 
 # master.menu.user-account ####################################################
 
