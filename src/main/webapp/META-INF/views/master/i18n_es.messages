@@ -110,6 +110,9 @@ master.menu.consumer = Consumidor
 master.menu.employer= Empleador
 master.menu.job.list = Mostrar trabajos
 
+###### auditor ################################################################
+master.menu.auditor = Auditor
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Cuenta

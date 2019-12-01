@@ -411,5 +411,36 @@
 <property name= "descriptor" ref="descriptor01"/>
 </bean>
 
+     <!--  Auditor  -->
+<bean name="auditor1UserAccount" class="acme.framework.entities.UserAccount">
+<property name="username" value="auditor1" />
+<property name="password" value="auditor1" />
+<property name="enabled" value="true" />
+<property name="identity">
+<bean class="acme.datatypes.UserIdentity">
+<property name="name" value="Auditor" />
+<property name="surname" value="One" />
+<property name="email" value="Auditor1@acme.com" />
+</bean>
+</property>
+<property name="roles">
+<list>
+<ref bean="auditor1Employer" />
+<ref bean="auditor1Authenticated" />
+</list>
+</property>
+</bean>
+
+<bean name="auditor1Employer" class="acme.entities.roles.Auditor">
+<property name="firm" value="Firm 1"/> 
+<property name="responsabilityStatement" value="Express an opinion on the financial statements" />
+<property name="userAccount" ref="auditor1UserAccount" />
+</bean>
+
+<bean name="auditor1Authenticated" class="acme.framework.entities.Authenticated">
+<property name="userAccount" ref="auditor1UserAccount" />
+</bean>
+
+
 </beans>
 

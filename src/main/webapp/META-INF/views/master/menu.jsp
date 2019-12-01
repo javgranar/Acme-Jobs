@@ -79,6 +79,11 @@
 		<acme:menu-suboption code="master.menu.job.list" action="/employer/job/list_mine" />
 		</acme:menu-option>
 		
+		<!---------------------------- AUDITOR  --------------------------------------->
+		<acme:menu-option code="master.menu.auditor" access="hasRole('Auditor')">			
+		<!-- <acme:menu-suboption code="master.menu.job.list" action="/Auditor/job/list_mine" /> -->
+		</acme:menu-option>
+		
 		<!----------------------------- CONSUMER --------------------------------------->
 		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')">
 			<acme:menu-suboption code="master.menu.offer.create" action="/authenticated/offer/create" />
