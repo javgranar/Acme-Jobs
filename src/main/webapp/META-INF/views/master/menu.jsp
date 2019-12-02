@@ -70,7 +70,8 @@
 		    <acme:menu-suboption code="master.menu.request_.list" action="/authenticated/request_/list" />
 		    <acme:menu-separator/>
 		    <acme:menu-suboption code="master.menu.challenge.list" action="/authenticated/challenge/list" />
-		
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.job.list" action="/authenticated/job/list_mine" />
 		
 		</acme:menu-option>
 		
