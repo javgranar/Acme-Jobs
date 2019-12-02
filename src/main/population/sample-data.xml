@@ -381,7 +381,7 @@
 </bean>
 
 <bean name="job2" class="acme.entities.jobs.Job">
-<property name= "reference" value="EMP1-JOB12"/>
+<property name= "reference" value="EMP1-JOB2"/>
 <property name= "title" value="Title 2 "/>
 <property name= "deadline" value="2022/11/28 10:30"/>
 <property name= "salary" value="€ 25,000.00"/>
@@ -391,6 +391,16 @@
 <property name= "employer" ref="employer1Employer"/>
 </bean>
 
+<bean name="job3" class="acme.entities.jobs.Job">
+<property name= "reference" value="EMP1-JOB3"/>
+<property name= "title" value="Title 3 "/>
+<property name= "deadline" value="2019/11/28 10:30"/>
+<property name= "salary" value="€ 22,000.00"/>
+<property name= "description" value="Description example 3 deadline in past"/>
+<property name= "moreInfo" value="http://www.example.com"/>
+<property name= "finalMode" value="true"/>
+<property name= "employer" ref="employer1Employer"/>
+</bean>
 <!--  Descriptor  -->
 <bean id="descriptor01" class="acme.entities.descriptors.Descriptor">
 <property name= "jobDescription" value="Descripcion increible"/>
