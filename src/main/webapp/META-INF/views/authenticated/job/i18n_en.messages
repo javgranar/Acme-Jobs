@@ -8,26 +8,26 @@
 # purposes.  The copyright owner does not job any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-employer.job.list.label.reference = Reference
-employer.job.list.label.title = Title
-employer.job.list.label.deadline = Deadline
+authenticated.job.list.label.reference = Reference
+authenticated.job.list.label.title = Title
+authenticated.job.list.label.deadline = Deadline
 
-employer.job.form.label.reference = Reference:
-employer.job.form.label.title = Title:
-employer.job.form.label.deadline = Deadline:
-employer.job.form.label.salary = Salary:
-employer.job.form.label.moreInfo = More Info:
-employer.job.form.label.description = Description:
-employer.job.form.label.finalMode = Final mode:
+authenticated.job.form.label.reference = Reference:
+authenticated.job.form.label.title = Title:
+authenticated.job.form.label.deadline = Deadline:
+authenticated.job.form.label.salary = Salary:
+authenticated.job.form.label.moreInfo = More Info:
+authenticated.job.form.label.description = Description:
+authenticated.job.form.label.finalMode = Final mode:
 
-employer.job.label.accept = Accept 
-employer.job.form.button.create = Create
+authenticated.job.label.accept = Accept 
+authenticated.job.form.button.create = Create
 
-employer.job.form.button.return = Return
+authenticated.job.form.button.return = Return
 
-employer.job.error.must-accept = Must accept 
+authenticated.job.error.must-accept = Must accept 
 
 
-employer.job.error.deadline-future = Deadline should be at least 1 day in the future from this moment 
+authenticated.job.error.deadline-future = Deadline should be at least 1 day in the future from this moment 
 
 

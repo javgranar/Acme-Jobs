@@ -8,26 +8,26 @@
 # purposes.  The copyright owner does not job any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-employer.job.list.label.reference = Referencia
-employer.job.list.label.title = Título
-employer.job.list.label.deadline = Fecha Límite
+authenticated.job.list.label.reference = Referencia
+authenticated.job.list.label.title = Título
+authenticated.job.list.label.deadline = Fecha Límite
 
-employer.job.form.label.title = Título:
-employer.job.form.label.reference = Referencia:
-employer.job.form.label.deadline = Fecha Límite:
-employer.job.form.label.salary = Salario:
-employer.job.form.label.moreInfo = Más información:
-employer.job.form.label.description = Descripción:
-employer.job.form.label.finalMode = Modo final:
+authenticated.job.form.label.title = Título:
+authenticated.job.form.label.reference = Referencia:
+authenticated.job.form.label.deadline = Fecha Límite:
+authenticated.job.form.label.salary = Salario:
+authenticated.job.form.label.moreInfo = Más información:
+authenticated.job.form.label.description = Descripción:
+authenticated.job.form.label.finalMode = Modo final:
 
-employer.job.form.button.create = Crear
+authenticated.job.form.button.create = Crear
 
-employer.job.label.accept = Acepto 
-employer.job.error.must-accept = Debe aceptar 
-
-
-employer.job.error.deadline-future = La fecha límite debe de ser en un día al menos desde este momento
+authenticated.job.label.accept = Acepto 
+authenticated.job.error.must-accept = Debe aceptar 
 
 
-employer.job.form.button.return = Volver
+authenticated.job.error.deadline-future = La fecha límite debe de ser en un día al menos desde este momento
+
+
+authenticated.job.form.button.return = Volver
 
