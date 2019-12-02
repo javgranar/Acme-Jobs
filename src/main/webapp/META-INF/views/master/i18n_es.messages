@@ -112,7 +112,9 @@ master.menu.job.list = Mostrar trabajos
 
 ###### auditor ################################################################
 master.menu.auditor = Auditor
-
+master.menu.auditRecord.list = Registro de auditoría
+master.menu.job.list.auditorRecord = Trabajos para los que ha hecho un registro de auditoría
+master.menu.job.list.NoauditorRecord= Trabajos para los que no ha hecho un registro de auditoría
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Cuenta

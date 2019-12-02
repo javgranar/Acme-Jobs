@@ -451,6 +451,63 @@
 <property name="userAccount" ref="auditor1UserAccount" />
 </bean>
 
+<bean name="auditor2UserAccount" class="acme.framework.entities.UserAccount">
+<property name="username" value="auditor2" />
+<property name="password" value="auditor2" />
+<property name="enabled" value="true" />
+<property name="identity">
+<bean class="acme.datatypes.UserIdentity">
+<property name="name" value="Auditor" />
+<property name="surname" value="Two" />
+<property name="email" value="Auditor2@acme.com" />
+</bean>
+</property>
+<property name="roles">
+<list>
+<ref bean="auditor2Employer" />
+<ref bean="auditor2Authenticated" />
+</list>
+</property>
+</bean>
+
+<bean name="auditor2Employer" class="acme.entities.roles.Auditor">
+<property name="firm" value="Firm 2"/> 
+<property name="responsabilityStatement" value="Express an opinion on the financial statements" />
+<property name="userAccount" ref="auditor2UserAccount" />
+</bean>
+
+<bean name="auditor2Authenticated" class="acme.framework.entities.Authenticated">
+<property name="userAccount" ref="auditor2UserAccount" />
+</bean>
+
+
+<bean name="auditRecord1" class="acme.entities.auditRecords.AuditRecord">
+<property name= "title" value="Audit Record 1 "/>
+<property name= "creationMoment" value="2021/11/28 10:30"/>
+<property name= "body" value="Audit Record Description"/>
+<property name= "published" value="true"/>
+<property name= "auditor" ref="auditor1Employer"/>
+<property name= "job" ref="job1"/>
+</bean>
+
+<bean name="auditRecord2" class="acme.entities.auditRecords.AuditRecord">
+<property name= "title" value="Audit Record 2 "/>
+<property name= "creationMoment" value="2021/12/01 11:30"/>
+<property name= "body" value="Audit Record Description"/>
+<property name= "published" value="true"/>
+<property name= "auditor" ref="auditor1Employer"/>
+<property name= "job" ref="job2"/>
+</bean>
+
+<bean name="auditRecord3" class="acme.entities.auditRecords.AuditRecord">
+<property name= "title" value="Audit Record 3 "/>
+<property name= "creationMoment" value="2021/11/30 12:30"/>
+<property name= "body" value="Audit Record Description"/>
+<property name= "published" value="true"/>
+<property name= "auditor" ref="auditor2Employer"/>
+<property name= "job" ref="job1"/>
+</bean>
+
 
 </beans>
 
