@@ -21,7 +21,7 @@
 		
 		
 		
-		<acme:menu-option code="master.menu.bulletins" >
+		<acme:menu-option code="master.menu.bulletins" access="isAnonymous()">
 			<acme:menu-suboption code="master.menu.anonymous.javi-link" action="https://www.youtube.com/?hl=es&gl=ES" />
 			<acme:menu-suboption code="master.menu.anonymous.angel-link" action="https://myanimelist.net/" />
 			<acme:menu-suboption code="master.menu.anonymous.flor-link" action="https://www.xataka.com/" />
@@ -71,7 +71,7 @@
 		    <acme:menu-separator/>
 		    <acme:menu-suboption code="master.menu.challenge.list" action="/authenticated/challenge/list" />
 			<acme:menu-separator/>
-			<acme:menu-suboption code="master.menu.job.list" action="/authenticated/job/list_mine" />
+			<acme:menu-suboption code="master.menu.job.listActive" action="/authenticated/job/list_mine" />
 		
 		</acme:menu-option>
 		

@@ -8,7 +8,6 @@ import acme.entities.jobs.Job;
 import acme.entities.roles.Employer;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Principal;
 import acme.framework.services.AbstractShowService;
 
 @Service
@@ -29,16 +28,16 @@ public class AuthenticatedJobShowService implements AbstractShowService<Employer
 
 		int jobId;
 		Job job;
-		Employer employer;
-		Principal principal;
+		//Employer employer;
+		//Principal principal;
 
 		jobId = request.getModel().getInteger("id");
 		job = this.repository.findOneById(jobId);
-		employer = job.getEmployer();
-		principal = request.getPrincipal();
+		//employer = job.getEmployer();
+		//principal = request.getPrincipal();
 
-		result = job.isFinalMode() || !job.isFinalMode() && employer.getUserAccount().getId() == principal.getActiveRoleId();
-
+		result = job.isFinalMode();
+		//|| !job.isFinalMode() && employer.getUserAccount().getId() == principal.getActiveRoleId();
 		return result;
 	}
 
