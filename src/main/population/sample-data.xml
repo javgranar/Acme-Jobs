@@ -401,9 +401,21 @@
 <property name= "finalMode" value="true"/>
 <property name= "employer" ref="employer1Employer"/>
 </bean>
+
 <!--  Descriptor  -->
 <bean id="descriptor01" class="acme.entities.descriptors.Descriptor">
 <property name= "jobDescription" value="Descripcion increible"/>
+<property name= "job" ref="job1"/>
+</bean>
+
+<bean id="descriptor02" class="acme.entities.descriptors.Descriptor">
+<property name= "jobDescription" value="Otra descripcion increible"/>
+<property name= "job" ref="job2"/>
+</bean>
+
+<bean id="descriptor03" class="acme.entities.descriptors.Descriptor">
+<property name= "jobDescription" value="¿Podria ser esta descripcion mas increible?"/>
+<property name= "job" ref="job3"/>
 </bean>
 
 	<!--  MandatoryDuty  -->
@@ -418,7 +430,14 @@
 <property name= "title" value="Solventar problema CSS web"/>
 <property name= "dutyDescription" value="Conseguir mostrar el logo de la empresa en la web corporativa"/>
 <property name= "percentage" value="37"/>
-<property name= "descriptor" ref="descriptor01"/>
+<property name= "descriptor" ref="descriptor02"/>
+</bean>
+
+<bean id="manDuty03" class="acme.entities.mandatoryDuties.MandatoryDuty">
+<property name= "title" value="Solventar todos nuestros problemas"/>
+<property name= "dutyDescription" value="Literalmente lo que pone en el titulo, mas claro no podria ser."/>
+<property name= "percentage" value="100"/>
+<property name= "descriptor" ref="descriptor03"/>
 </bean>
 
      <!--  Auditor  -->
