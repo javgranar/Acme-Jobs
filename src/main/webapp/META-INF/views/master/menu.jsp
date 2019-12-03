@@ -70,7 +70,8 @@
 		    <acme:menu-suboption code="master.menu.request_.list" action="/authenticated/request_/list" />
 		    <acme:menu-separator/>
 		    <acme:menu-suboption code="master.menu.challenge.list" action="/authenticated/challenge/list" />
-		
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.job.list" action="/authenticated/job/list_mine" />
 		
 		</acme:menu-option>
 		
@@ -79,9 +80,16 @@
 		<acme:menu-suboption code="master.menu.job.list" action="/employer/job/list_mine" />
 		</acme:menu-option>
 		
+
 		<!---------------------------- WORKER  --------------------------------------->
 		<acme:menu-option code="master.menu.worker" access="hasRole('Worker')">			
 		<acme:menu-suboption code="master.menu.application.list" action="/worker/application/list_mine" />
+
+		<!---------------------------- AUDITOR  --------------------------------------->
+		<acme:menu-option code="master.menu.auditor" access="hasRole('Auditor')">			
+	    <acme:menu-suboption code="master.menu.job.list.auditorRecord" action="/auditor/job/list-auditor-record" />
+	    <acme:menu-suboption code="master.menu.job.list.NoauditorRecord" action="/auditor/job/list-no-auditor-record" />
+	    <acme:menu-suboption code="master.menu.auditRecord.list" action="/auditor/audit-record/list_mine" /> 
 		</acme:menu-option>
 		
 		<!----------------------------- CONSUMER --------------------------------------->

@@ -34,6 +34,25 @@
         `status` varchar(255),
         `job_id` integer not null,
         `worker_id` integer not null,
+
+    create table `audit_record` (
+       `id` integer not null,
+        `version` integer not null,
+        `body` varchar(255),
+        `creation_moment` datetime(6),
+        `published` bit,
+        `title` varchar(255),
+        `auditor_id` integer not null,
+        `job_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `auditor` (
+       `id` integer not null,
+        `version` integer not null,
+        `user_account_id` integer,
+        `firm` varchar(255),
+        `responsability_statement` varchar(255),
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -114,6 +133,13 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `descriptor` (
+       `id` integer not null,
+        `version` integer not null,
+        `job_description` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `employer` (
        `id` integer not null,
         `version` integer not null,
@@ -154,6 +180,16 @@
         `salary_currency` varchar(255),
         `title` varchar(255),
         `employer_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `mandatory_duty` (
+       `id` integer not null,
+        `version` integer not null,
+        `duty_description` varchar(255),
+        `percentage` integer,
+        `title` varchar(255),
+        `descriptor_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -280,6 +316,21 @@ create index IDXn3v48hbbpyaqbons3pqgno06y on `request_` (`date_limit`);
        foreign key (`worker_id`) 
        references `worker` (`id`);
 
+    alter table `audit_record` 
+       add constraint `FKdcrrgv6rkfw2ruvdja56un4ji` 
+       foreign key (`auditor_id`) 
+       references `auditor` (`id`);
+
+    alter table `audit_record` 
+       add constraint `FKlbvbyimxf6pxvbhkdd4vfhlnd` 
+       foreign key (`job_id`) 
+       references `job` (`id`);
+
+    alter table `auditor` 
+       add constraint FK_clqcq9lyspxdxcp6o4f3vkelj 
+       foreign key (`user_account_id`) 
+       references `user_account` (`id`);
+
     alter table `authenticated` 
        add constraint FK_h52w0f3wjoi68b63wv9vwon57 
        foreign key (`user_account_id`) 
@@ -304,6 +355,11 @@ create index IDXn3v48hbbpyaqbons3pqgno06y on `request_` (`date_limit`);
        add constraint `FK3rxjf8uh6fh2u990pe8i2at0e` 
        foreign key (`employer_id`) 
        references `employer` (`id`);
+
+    alter table `mandatory_duty` 
+       add constraint `FKbtbut9e8de9qosvtm31cbdll8` 
+       foreign key (`descriptor_id`) 
+       references `descriptor` (`id`);
 
     alter table `provider` 
        add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 

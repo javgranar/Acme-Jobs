@@ -15,6 +15,18 @@
        drop 
        foreign key `FKmbjdoxi3o93agxosoate4sxbt`;
 
+    alter table `audit_record` 
+       drop 
+       foreign key `FKdcrrgv6rkfw2ruvdja56un4ji`;
+
+    alter table `audit_record` 
+       drop 
+       foreign key `FKlbvbyimxf6pxvbhkdd4vfhlnd`;
+
+    alter table `auditor` 
+       drop 
+       foreign key FK_clqcq9lyspxdxcp6o4f3vkelj;
+
     alter table `authenticated` 
        drop 
        foreign key FK_h52w0f3wjoi68b63wv9vwon57;
@@ -35,6 +47,10 @@
        drop 
        foreign key `FK3rxjf8uh6fh2u990pe8i2at0e`;
 
+    alter table `mandatory_duty` 
+       drop 
+       foreign key `FKbtbut9e8de9qosvtm31cbdll8`;
+
     alter table `provider` 
        drop 
        foreign key FK_b1gwnjqm6ggy9yuiqm0o4rlmd;
@@ -49,7 +65,13 @@
 
     drop table if exists `anonymous`;
 
+
     drop table if exists `application`;
+
+    drop table if exists `audit_record`;
+
+    drop table if exists `auditor`;
+
 
     drop table if exists `authenticated`;
 
@@ -67,6 +89,8 @@
 
     drop table if exists `correa_bulletin`;
 
+    drop table if exists `descriptor`;
+
     drop table if exists `employer`;
 
     drop table if exists `granja_bulletin`;
@@ -74,6 +98,8 @@
     drop table if exists `investor_record`;
 
     drop table if exists `job`;
+
+    drop table if exists `mandatory_duty`;
 
     drop table if exists `morante_bulletin`;
 

@@ -424,6 +424,17 @@
 		<property name="employer" ref="employer1Employer" />
 	</bean>
 
+<bean name="job3" class="acme.entities.jobs.Job">
+<property name= "reference" value="EMP1-JOB3"/>
+<property name= "title" value="Title 3 "/>
+<property name= "deadline" value="2019/11/28 10:30"/>
+<property name= "salary" value="€ 22,000.00"/>
+<property name= "description" value="Description example 3 deadline in past"/>
+<property name= "moreInfo" value="http://www.example.com"/>
+<property name= "finalMode" value="true"/>
+<property name= "employer" ref="employer1Employer"/>
+</bean>
+
 	<!-- Applications -->
 
 	<bean name="application1" class="acme.entities.applications.Application">
@@ -438,5 +449,132 @@
 	</bean>
 
 
-</beans>
 
+
+<!--  Descriptor  -->
+<bean id="descriptor01" class="acme.entities.descriptors.Descriptor">
+<property name= "jobDescription" value="Descripcion increible"/>
+<property name= "job" ref="job1"/>
+</bean>
+
+<bean id="descriptor02" class="acme.entities.descriptors.Descriptor">
+<property name= "jobDescription" value="Otra descripcion increible"/>
+<property name= "job" ref="job2"/>
+</bean>
+
+<bean id="descriptor03" class="acme.entities.descriptors.Descriptor">
+<property name= "jobDescription" value="¿Podria ser esta descripcion mas increible?"/>
+<property name= "job" ref="job3"/>
+</bean>
+
+	<!--  MandatoryDuty  -->
+<bean id="manDuty01" class="acme.entities.mandatoryDuties.MandatoryDuty">
+<property name= "title" value="Solventar problema impresora"/>
+<property name= "dutyDescription" value="Solucionar problema evita funcionamiento de impresora"/>
+<property name= "percentage" value="50"/>
+<property name= "descriptor" ref="descriptor01"/>
+</bean>
+
+<bean id="manDuty02" class="acme.entities.mandatoryDuties.MandatoryDuty">
+<property name= "title" value="Solventar problema CSS web"/>
+<property name= "dutyDescription" value="Conseguir mostrar el logo de la empresa en la web corporativa"/>
+<property name= "percentage" value="37"/>
+<property name= "descriptor" ref="descriptor02"/>
+</bean>
+
+<bean id="manDuty03" class="acme.entities.mandatoryDuties.MandatoryDuty">
+<property name= "title" value="Solventar todos nuestros problemas"/>
+<property name= "dutyDescription" value="Literalmente lo que pone en el titulo, mas claro no podria ser."/>
+<property name= "percentage" value="100"/>
+<property name= "descriptor" ref="descriptor03"/>
+</bean>
+
+     <!--  Auditor  -->
+<bean name="auditor1UserAccount" class="acme.framework.entities.UserAccount">
+<property name="username" value="auditor1" />
+<property name="password" value="auditor1" />
+<property name="enabled" value="true" />
+<property name="identity">
+<bean class="acme.datatypes.UserIdentity">
+<property name="name" value="Auditor" />
+<property name="surname" value="One" />
+<property name="email" value="Auditor1@acme.com" />
+</bean>
+</property>
+<property name="roles">
+<list>
+<ref bean="auditor1Employer" />
+<ref bean="auditor1Authenticated" />
+</list>
+</property>
+</bean>
+
+<bean name="auditor1Employer" class="acme.entities.roles.Auditor">
+<property name="firm" value="Firm 1"/> 
+<property name="responsabilityStatement" value="Express an opinion on the financial statements" />
+<property name="userAccount" ref="auditor1UserAccount" />
+</bean>
+
+<bean name="auditor1Authenticated" class="acme.framework.entities.Authenticated">
+<property name="userAccount" ref="auditor1UserAccount" />
+</bean>
+
+<bean name="auditor2UserAccount" class="acme.framework.entities.UserAccount">
+<property name="username" value="auditor2" />
+<property name="password" value="auditor2" />
+<property name="enabled" value="true" />
+<property name="identity">
+<bean class="acme.datatypes.UserIdentity">
+<property name="name" value="Auditor" />
+<property name="surname" value="Two" />
+<property name="email" value="Auditor2@acme.com" />
+</bean>
+</property>
+<property name="roles">
+<list>
+<ref bean="auditor2Employer" />
+<ref bean="auditor2Authenticated" />
+</list>
+</property>
+</bean>
+
+<bean name="auditor2Employer" class="acme.entities.roles.Auditor">
+<property name="firm" value="Firm 2"/> 
+<property name="responsabilityStatement" value="Express an opinion on the financial statements" />
+<property name="userAccount" ref="auditor2UserAccount" />
+</bean>
+
+<bean name="auditor2Authenticated" class="acme.framework.entities.Authenticated">
+<property name="userAccount" ref="auditor2UserAccount" />
+</bean>
+
+
+<bean name="auditRecord1" class="acme.entities.auditRecords.AuditRecord">
+<property name= "title" value="Audit Record 1 "/>
+<property name= "creationMoment" value="2021/11/28 10:30"/>
+<property name= "body" value="Audit Record Description"/>
+<property name= "published" value="true"/>
+<property name= "auditor" ref="auditor1Employer"/>
+<property name= "job" ref="job1"/>
+</bean>
+
+<bean name="auditRecord2" class="acme.entities.auditRecords.AuditRecord">
+<property name= "title" value="Audit Record 2 "/>
+<property name= "creationMoment" value="2021/12/01 11:30"/>
+<property name= "body" value="Audit Record Description"/>
+<property name= "published" value="true"/>
+<property name= "auditor" ref="auditor1Employer"/>
+<property name= "job" ref="job2"/>
+</bean>
+
+<bean name="auditRecord3" class="acme.entities.auditRecords.AuditRecord">
+<property name= "title" value="Audit Record 3 "/>
+<property name= "creationMoment" value="2021/11/30 12:30"/>
+<property name= "body" value="Audit Record Description"/>
+<property name= "published" value="true"/>
+<property name= "auditor" ref="auditor2Employer"/>
+<property name= "job" ref="job1"/>
+</bean>
+
+
+</beans>
