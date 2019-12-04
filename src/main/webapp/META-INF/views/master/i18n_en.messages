@@ -84,6 +84,7 @@ master.menu.request_.create = Create Request
 master.menu.challenges = Challenges
 master.menu.challenge.list = List Challenges
 
+master.menu.job.listActive = List active jobs
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrator
@@ -106,7 +107,7 @@ master.menu.consumer = Consumer
 
 ###### employer################################################################
 master.menu.employer= Employer
-master.menu.job.list = List jobs
+master.menu.job.list = List my jobs
 master.menu.employer.application = Applications
 master.menu.application.list = Me Applications
 
