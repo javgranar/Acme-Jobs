@@ -411,6 +411,7 @@
 		<property name="moreInfo" value="http://www.example.com" />
 		<property name="finalMode" value="true" />
 		<property name="employer" ref="employer1Employer" />
+		<property name= "descriptor" ref="descriptor01"/>
 	</bean>
 
 	<bean name="job2" class="acme.entities.jobs.Job">
@@ -422,6 +423,7 @@
 		<property name="moreInfo" value="http://www.example.com" />
 		<property name="finalMode" value="true" />
 		<property name="employer" ref="employer1Employer" />
+		<property name= "descriptor" ref="descriptor02"/>
 	</bean>
 
 <bean name="job3" class="acme.entities.jobs.Job">
@@ -433,9 +435,10 @@
 <property name= "moreInfo" value="http://www.example.com"/>
 <property name= "finalMode" value="true"/>
 <property name= "employer" ref="employer1Employer"/>
+<property name= "descriptor" ref="descriptor03"/>
 </bean>
 
-	<!-- Applications -->
+<!-- Applications -->
 
 	<bean name="application1" class="acme.entities.applications.Application">
 		<property name="reference" value="EMP1-JOB1:AP001" />
@@ -454,17 +457,14 @@
 <!--  Descriptor  -->
 <bean id="descriptor01" class="acme.entities.descriptors.Descriptor">
 <property name= "jobDescription" value="Descripcion increible"/>
-<property name= "job" ref="job1"/>
 </bean>
 
 <bean id="descriptor02" class="acme.entities.descriptors.Descriptor">
 <property name= "jobDescription" value="Otra descripcion increible"/>
-<property name= "job" ref="job2"/>
 </bean>
 
 <bean id="descriptor03" class="acme.entities.descriptors.Descriptor">
 <property name= "jobDescription" value="¿Podria ser esta descripcion mas increible?"/>
-<property name= "job" ref="job3"/>
 </bean>
 
 	<!--  MandatoryDuty  -->

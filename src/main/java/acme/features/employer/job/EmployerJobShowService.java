@@ -46,6 +46,10 @@ public class EmployerJobShowService implements AbstractShowService<Employer, Job
 		assert entity != null;
 		assert model != null;
 
+		String jobDescription = this.repository.findDescriptorDescription(request.getModel().getInteger("id"));
+		String descriptorId = this.repository.findDescriptorDescription(request.getModel().getInteger("id"));
+		model.setAttribute("jobDescription", jobDescription);
+		model.setAttribute("descriptorId", descriptorId);
 		request.unbind(entity, model, "reference", "title", "deadline");
 		request.unbind(entity, model, "salary", "moreInfo", "description", "finalMode");
 
