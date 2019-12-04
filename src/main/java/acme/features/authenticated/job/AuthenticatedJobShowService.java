@@ -5,13 +5,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.jobs.Job;
-import acme.entities.roles.Employer;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-
 import acme.framework.entities.Authenticated;
-import acme.framework.entities.Principal;
-
 import acme.framework.services.AbstractShowService;
 
 @Service
@@ -51,8 +47,6 @@ public class AuthenticatedJobShowService implements AbstractShowService<Authenti
 		assert entity != null;
 		assert model != null;
 
-		String url = "/authenticated/audit-record/list?id=" + request.getModel().getInteger("id");
-		model.setAttribute("url", url);
 		request.unbind(entity, model, "reference", "title", "deadline");
 		request.unbind(entity, model, "salary", "moreInfo", "description", "finalMode");
 

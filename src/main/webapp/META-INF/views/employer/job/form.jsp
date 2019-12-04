@@ -14,9 +14,6 @@
 
 	<acme:form-return code="employer.job.form.button.return"/>
 	
-	
-	<button type="button" formmethod="get" onclick="javascript: redirect('${url}')" class="btn btn-primary">
-				<acme:message code="employer.job.form.button.listAuditRecord"/>
-			</button>
+	<acme:form-submit code="employer.job.form.button.listAuditRecord" method ="get" action="/authenticated/audit-record/list?id=${id}"/> 
 	</acme:form> 
 

@@ -47,8 +47,6 @@ public class AuditorJobShowService implements AbstractShowService<Auditor, Job> 
 		assert entity != null;
 		assert model != null;
 
-		String url = "/authenticated/audit-record/list?id=" + request.getModel().getInteger("id");
-		model.setAttribute("url", url);
 		request.unbind(entity, model, "reference", "title", "deadline");
 		request.unbind(entity, model, "salary", "moreInfo", "description", "finalMode");
 
