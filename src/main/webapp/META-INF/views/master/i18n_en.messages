@@ -106,7 +106,8 @@ master.menu.consumer = Consumer
 
 ###### employer################################################################
 master.menu.employer= Employer
-master.menu.job.list = List jobs
+master.menu.job.listMine = List my jobs
+master.menu.job.listAll = List all jobs (only employers)
 
 ###### auditor ################################################################
 master.menu.auditor = Auditor 
