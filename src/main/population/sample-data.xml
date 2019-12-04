@@ -424,6 +424,7 @@
 		<property name="moreInfo" value="http://www.example.com" />
 		<property name="finalMode" value="true" />
 		<property name="employer" ref="employer1Employer" />
+		<property name= "descriptor" ref="descriptor01"/>
 	</bean>
 
 	<bean name="job2" class="acme.entities.jobs.Job">
@@ -435,6 +436,7 @@
 		<property name="moreInfo" value="http://www.example.com" />
 		<property name="finalMode" value="true" />
 		<property name="employer" ref="employer1Employer" />
+		<property name= "descriptor" ref="descriptor02"/>
 	</bean>
 
 	<bean name="job3" class="acme.entities.jobs.Job">
@@ -446,6 +448,7 @@
 		<property name="moreInfo" value="http://www.example.com" />
 		<property name="finalMode" value="true" />
 		<property name="employer" ref="employer1Employer" />
+    <property name= "descriptor" ref="descriptor03"/>
 	</bean>
 
 	<bean name="job4" class="acme.entities.jobs.Job">
@@ -469,7 +472,6 @@
 		<property name="finalMode" value="true" />
 		<property name="employer" ref="employer2Employer" />
 	</bean>
-
 
 	<!-- /////////////////// APLICATIONS ///////////////////////// -->
 	<bean name="application1" class="acme.entities.applications.Application">
