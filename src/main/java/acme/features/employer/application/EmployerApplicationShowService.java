@@ -1,23 +1,24 @@
 
-package acme.features.worker.application;
+package acme.features.employer.application;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.applications.Application;
-import acme.entities.roles.Worker;
+import acme.entities.jobs.Job;
+import acme.entities.roles.Employer;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.entities.Principal;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class WorkerApplicationShowService implements AbstractShowService<Worker, Application> {
+public class EmployerApplicationShowService implements AbstractShowService<Employer, Application> {
 
 	// Internal State ------------------------------------------------------
 
 	@Autowired
-	WorkerApplicationRepository repository;
+	EmployerApplicationRepository repository;
 
 
 	// AbstractListService<Worker, Announcemen> interface ------------
@@ -28,14 +29,16 @@ public class WorkerApplicationShowService implements AbstractShowService<Worker,
 		boolean result;
 		int applicationId;
 		Application application;
-		Worker worker;
+		Job job;
+		Employer employer;
 		Principal principal;
 
 		applicationId = request.getModel().getInteger("id");
 		application = this.repository.findOneById(applicationId);
-		worker = application.getWorker();
+		job = application.getJob();
+		employer = job.getEmployer();
 		principal = request.getPrincipal();
-		result = worker.getUserAccount().getId() == principal.getAccountId();
+		result = employer.getUserAccount().getId() == principal.getAccountId();
 
 		return result;
 	}
