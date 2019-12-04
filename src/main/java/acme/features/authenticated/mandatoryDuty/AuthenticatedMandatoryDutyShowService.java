@@ -1,22 +1,22 @@
 
-package acme.features.employer.mandatoryDuty;
+package acme.features.authenticated.mandatoryDuty;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.entities.mandatoryDuties.MandatoryDuty;
-import acme.entities.roles.Employer;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
+import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class EmployerMandatoryDutyShowService implements AbstractShowService<Employer, MandatoryDuty> {
+public class AuthenticatedMandatoryDutyShowService implements AbstractShowService<Authenticated, MandatoryDuty> {
 
 	// Internal State ------------------------------------------------------
 
 	@Autowired
-	EmployerMandatoryDutyRepository repository;
+	AuthenticatedMandatoryDutyRepository repository;
 
 
 	// AbstractListService<Anonymous, Announcemen> interface ------------

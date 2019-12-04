@@ -1,5 +1,5 @@
 
-package acme.features.employer.mandatoryDuty;
+package acme.features.authenticated.mandatoryDuty;
 
 import java.util.Collection;
 
@@ -10,7 +10,7 @@ import acme.entities.mandatoryDuties.MandatoryDuty;
 import acme.framework.repositories.AbstractRepository;
 
 @Repository
-public interface EmployerMandatoryDutyRepository extends AbstractRepository {
+public interface AuthenticatedMandatoryDutyRepository extends AbstractRepository {
 
 	@Query("select a from InvestorRecord a")
 	Collection<MandatoryDuty> findManyAll();

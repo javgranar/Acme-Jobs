@@ -1,5 +1,5 @@
 
-package acme.features.employer.mandatoryDuty;
+package acme.features.authenticated.mandatoryDuty;
 
 import javax.annotation.PostConstruct;
 
@@ -8,21 +8,21 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import acme.entities.mandatoryDuties.MandatoryDuty;
-import acme.entities.roles.Employer;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
+import acme.framework.entities.Authenticated;
 
 @Controller
-@RequestMapping("/employer/mandatory-duty/")
-public class EmployerMandatoryDutyController extends AbstractController<Employer, MandatoryDuty> {
+@RequestMapping("/authenticated/mandatory-duty/")
+public class AuthenticatedMandatoryDutyController extends AbstractController<Authenticated, MandatoryDuty> {
 
 	//	Internal state ------------
 
 	@Autowired
-	private EmployerMandatoryDutyListService	listService;
+	private AuthenticatedMandatoryDutyListService	listService;
 
 	@Autowired
-	private EmployerMandatoryDutyShowService	showService;
+	private AuthenticatedMandatoryDutyShowService	showService;
 
 
 	//	Constructors -------------

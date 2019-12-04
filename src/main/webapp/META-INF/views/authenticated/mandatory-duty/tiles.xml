@@ -18,20 +18,12 @@
 
 <tiles-definitions>
 
-	<definition name="employer/job/list" extends="master">		
-		<put-attribute name="body" type="template" value="../employer/job/list.jsp" />
+	<definition name="authenticated/mandatory-duty/list" extends="master">		
+		<put-attribute name="body" type="template" value="../authenticated/mandatory-duty/list.jsp" />
 	</definition>
 	
-	<definition name="employer/job/form" extends="master">		
-		<put-attribute name="body" type="template" value="../employer/job/form.jsp" />
-	</definition>
-	
-	<definition name="auditor/job/list" extends="master">		
-		<put-attribute name="body" type="template" value="../employer/job/list.jsp" />
-	</definition>
-	
-	<definition name="auditor/job/form" extends="master">		
-		<put-attribute name="body" type="template" value="../employer/job/form.jsp" />
+	<definition name="authenticated/mandatory-duty/form" extends="master">		
+		<put-attribute name="body" type="template" value="../authenticated/mandatory-duty/form.jsp" />
 	</definition>
 
 </tiles-definitions> 
