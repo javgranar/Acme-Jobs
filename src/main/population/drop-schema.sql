@@ -39,6 +39,10 @@
        drop 
        foreign key FK_6cyha9f1wpj0dpbxrrjddrqed;
 
+    alter table `descriptor` 
+       drop 
+       foreign key `FKgfulfilmwi4hhaquiu7fr5g0g`;
+
     alter table `employer` 
        drop 
        foreign key FK_na4dfobmeuxkwf6p75abmb2tr;
@@ -65,13 +69,11 @@
 
     drop table if exists `anonymous`;
 
-
     drop table if exists `application`;
 
     drop table if exists `audit_record`;
 
     drop table if exists `auditor`;
-
 
     drop table if exists `authenticated`;
 

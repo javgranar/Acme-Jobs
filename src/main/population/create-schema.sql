@@ -27,13 +27,15 @@
        `id` integer not null,
         `version` integer not null,
         `deadline` datetime(6),
-        `qualifications` varchar(255),
+        `qualifications` varchar(1000),
         `reference` varchar(255),
-        `skills` varchar(255),
-        `statement` varchar(255),
+        `skills` varchar(1000),
+        `statement` varchar(1000),
         `status` varchar(255),
         `job_id` integer not null,
         `worker_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
 
     create table `audit_record` (
        `id` integer not null,
@@ -137,6 +139,7 @@
        `id` integer not null,
         `version` integer not null,
         `job_description` varchar(255),
+        `job_id` integer not null,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -280,6 +283,9 @@ create index IDXnhikaa2dj3la6o2o7e9vo01y0 on `announcement` (`moment`);
        add constraint UK_ct7r18vvxl5g4c4k7aefpa4do unique (`reference`);
 create index IDXnr284tes3x8hnd3h716tmb3fr on `challenge` (`deadline`);
 create index IDX7y4rcwjsl6wvsrlyq38xtq8bu on `company_record` (`name`);
+
+    alter table `descriptor` 
+       add constraint UK_4iw18njo4d0q8gvnhe04vmctw unique (`job_id`);
 create index IDX1cpy8kxlsu865sf28r64gus4k on `investor_record` (`name`);
 
     alter table `job` 
@@ -345,6 +351,11 @@ create index IDXn3v48hbbpyaqbons3pqgno06y on `request_` (`date_limit`);
        add constraint FK_6cyha9f1wpj0dpbxrrjddrqed 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
+
+    alter table `descriptor` 
+       add constraint `FKgfulfilmwi4hhaquiu7fr5g0g` 
+       foreign key (`job_id`) 
+       references `job` (`id`);
 
     alter table `employer` 
        add constraint FK_na4dfobmeuxkwf6p75abmb2tr 

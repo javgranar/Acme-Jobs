@@ -84,6 +84,7 @@ master.menu.request_.create = Create Request
 master.menu.challenges = Challenges
 master.menu.challenge.list = List Challenges
 
+master.menu.job.listActive = List active jobs
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrator
@@ -106,13 +107,21 @@ master.menu.consumer = Consumer
 
 ###### employer################################################################
 master.menu.employer= Employer
-master.menu.job.list = List jobs
+master.menu.job.listMine = List my jobs
+master.menu.job.listAll = List all jobs (only employers)
+
+master.menu.employer.application = Applications
+master.menu.application.list = Me Applications
+
+###### worker################################################################
+master.menu.worker = Worker
+master.menu.application.list2 = My Applications
 
 ###### auditor ################################################################
 master.menu.auditor = Auditor 
-master.menu.auditRecord.list = Audit Record
-master.menu.job.list.auditorRecord = Jobs with your audit record
-master.menu.job.list.NoauditorRecord= Jobs without your audit record
+master.menu.auditRecord.list = My Audit Records
+master.menu.job.list.auditorRecord = Jobs with my audit record
+master.menu.job.list.NoauditorRecord= Jobs without my audit record
 
 # master.menu.user-account ####################################################
 

@@ -21,7 +21,7 @@
 		
 		
 		
-		<acme:menu-option code="master.menu.bulletins" >
+		<acme:menu-option code="master.menu.bulletins" access="isAnonymous()">
 			<acme:menu-suboption code="master.menu.anonymous.javi-link" action="https://www.youtube.com/?hl=es&gl=ES" />
 			<acme:menu-suboption code="master.menu.anonymous.angel-link" action="https://myanimelist.net/" />
 			<acme:menu-suboption code="master.menu.anonymous.flor-link" action="https://www.xataka.com/" />
@@ -71,19 +71,24 @@
 		    <acme:menu-separator/>
 		    <acme:menu-suboption code="master.menu.challenge.list" action="/authenticated/challenge/list" />
 			<acme:menu-separator/>
-			<acme:menu-suboption code="master.menu.job.list" action="/authenticated/job/list_mine" />
+			<acme:menu-suboption code="master.menu.job.listAll" action="/authenticated/job/list_mine" />
+
 		
 		</acme:menu-option>
 		
 		<!---------------------------- EMPLOYER  --------------------------------------->
 		<acme:menu-option code="master.menu.employer" access="hasRole('Employer')">			
-		<acme:menu-suboption code="master.menu.job.list" action="/employer/job/list_mine" />
+		<acme:menu-suboption code="master.menu.job.listMine" action="/employer/job/list_mine" />
+		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.employer.application" access="hasRole('Employer')">			
+		<acme:menu-suboption code="master.menu.application.list" action="/employer/application/list_mine" />
 		</acme:menu-option>
 		
 
 		<!---------------------------- WORKER  --------------------------------------->
 		<acme:menu-option code="master.menu.worker" access="hasRole('Worker')">			
-		<acme:menu-suboption code="master.menu.application.list" action="/worker/application/list_mine" />
+		<acme:menu-suboption code="master.menu.application.list2" action="/worker/application/list_mine" />
 		</acme:menu-option>
 
 		<!---------------------------- AUDITOR  --------------------------------------->

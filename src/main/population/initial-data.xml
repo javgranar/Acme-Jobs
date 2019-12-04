@@ -10,7 +10,7 @@
 
 	<import resource="conversion-service.xml" />
 
-	<!-- Anonymous user -->
+	<!-- ///////////////////////	Anonymous user	//////////////////////////// -->
 
 	<bean name="anonymousUserAccount" class="acme.framework.entities.UserAccount">
 		<property name="username" value="anonymous" />
@@ -34,8 +34,8 @@
 		<property name="userAccount" ref="anonymousUserAccount" />
 	</bean>
 
-	<!-- Tester -->
-
+	
+	<!-- /////////////////////////	TESTER	//////////////////////////////////// -->
 	<bean name="authenticatedUserAccount" class="acme.framework.entities.UserAccount">
 		<property name="username" value="tester" />
 		<property name="password" value="tester" />
@@ -72,8 +72,7 @@
 	</bean>
 	
 
-	<!-- Administrators -->
-
+	<!-- //////////////////////////	ADMINISTRATORS	//////////////////////////// -->
 	<bean name="administratorUserAccount" class="acme.framework.entities.UserAccount">
 		<property name="username" value="administrator" />
 		<property name="password" value="administrator" />
