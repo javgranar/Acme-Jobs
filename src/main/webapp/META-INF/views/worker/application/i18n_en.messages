@@ -10,5 +10,6 @@ worker.application.form.button.return = Return
 worker.application.list.label.reference = Reference
 worker.application.list.label.deadline = Deadline
 worker.application.list.label.status = Status
+worker.application.form.label.jobReference = Related Job's reference
 
 
