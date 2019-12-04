@@ -40,12 +40,15 @@ public class Application extends DomainEntity {
 	private String				status;
 
 	@NotBlank
+	@Column(length = 1000)
 	private String				statement;
 
 	@NotBlank
+	@Column(length = 1000)
 	private String				skills;
 
 	@NotBlank
+	@Column(length = 1000)
 	private String				qualifications;
 
 	@NotNull

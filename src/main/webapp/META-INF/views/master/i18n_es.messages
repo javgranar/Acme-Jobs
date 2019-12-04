@@ -110,6 +110,12 @@ master.menu.consumer = Consumidor
 ###### employer################################################################
 master.menu.employer= Empleador
 master.menu.job.list = Mostrar mis trabajos
+master.menu.employer.application = Peticiones
+master.menu.application.list = Peticiones a mis trabajos
+
+###### worker################################################################
+master.menu.worker = Trabajador
+master.menu.application.list2 = Mis Peticiones
 
 ###### auditor ################################################################
 master.menu.auditor = Auditor

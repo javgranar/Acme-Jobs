@@ -108,6 +108,12 @@ master.menu.consumer = Consumer
 ###### employer################################################################
 master.menu.employer= Employer
 master.menu.job.list = List my jobs
+master.menu.employer.application = Applications
+master.menu.application.list = Me Applications
+
+###### worker################################################################
+master.menu.worker = Worker
+master.menu.application.list2 = My Applications
 
 ###### auditor ################################################################
 master.menu.auditor = Auditor 
