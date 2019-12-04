@@ -1,5 +1,5 @@
 
-package acme.features.auditor.auditRecord;
+package acme.features.authenticated.auditRecord;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -8,16 +8,17 @@ import acme.entities.auditRecords.AuditRecord;
 import acme.entities.roles.Auditor;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
+import acme.framework.entities.Authenticated;
 import acme.framework.entities.Principal;
 import acme.framework.services.AbstractShowService;
 
 @Service
-public class AuditorAuditRecordShowService implements AbstractShowService<Auditor, AuditRecord> {
+public class AuthenticatedAuditRecordShowService implements AbstractShowService<Authenticated, AuditRecord> {
 
 	// Internal State ------------------------------------------------------
 
 	@Autowired
-	AuditorAuditRecordRepository repository;
+	AuthenticatedAuditRecordRepository repository;
 
 
 	// AbstractListService<Auditor, AuditorRecord> interface ------------
@@ -27,15 +28,15 @@ public class AuditorAuditRecordShowService implements AbstractShowService<Audito
 		assert request != null;
 		boolean result;
 		int auditorRecordId;
-		AuditRecord auditorRecord;
+		AuditRecord auditRecord;
 		Auditor auditor;
 		Principal principal;
 
 		auditorRecordId = request.getModel().getInteger("id");
-		auditorRecord = this.repository.findOneById(auditorRecordId);
-		auditor = auditorRecord.getAuditor();
+		auditRecord = this.repository.findOneById(auditorRecordId);
+		auditor = auditRecord.getAuditor();
 		principal = request.getPrincipal();
-		result = auditor.getUserAccount().getId() == principal.getAccountId();
+		result = auditor.getUserAccount().getId() == principal.getAccountId() || auditRecord.getPublished() == true;
 
 		return result;
 	}
