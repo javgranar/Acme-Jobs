@@ -16,9 +16,8 @@
 <%@taglib prefix="acme" tagdir="/WEB-INF/tags"%>
 
 <acme:list>
- <acme:list-column code="worker.application.list.label.reference" path="reference" width="10%"/>
- <acme:list-column code="worker.application.list.label.deadline" path="deadline" width="10%"/>
- <acme:list-column code="worker.application.list.label.status" path="status" width="10%"/>
- <acme:list-column code="worker.application.list.label.statement" path="statement" width="70%"/>
+ <acme:list-column code="worker.application.list.label.reference" path="reference" width="30%"/>
+ <acme:list-column code="worker.application.list.label.deadline" path="deadline" width="30%"/>
+ <acme:list-column code="worker.application.list.label.status" path="status" width="30%"/>
 </acme:list>
 

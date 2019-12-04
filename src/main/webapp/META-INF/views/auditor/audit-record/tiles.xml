@@ -26,5 +26,14 @@
 		<put-attribute name="body" type="template" value="../auditor/audit-record/form.jsp" />
 	</definition>
 
+    <definition name="authenticated/audit-record/list" extends="master">		
+		<put-attribute name="body" type="template" value="../auditor/audit-record/list.jsp" />
+	</definition>
+	
+	<definition name="authenticated/audit-record/form" extends="master">		
+		<put-attribute name="body" type="template" value="../auditor/audit-record/form.jsp" />
+	</definition>
+
+
 </tiles-definitions> 
 

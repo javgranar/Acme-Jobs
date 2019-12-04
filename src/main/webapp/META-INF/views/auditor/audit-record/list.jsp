@@ -19,4 +19,5 @@
  <acme:list-column code="auditor.audit-record.list.label.title" path="title" width="10%"/>
  <acme:list-column code="auditor.audit-record.list.label.creationMoment" path="creationMoment" width="10%"/>
 </acme:list>
+<acme:form-return code="auditor.audit-record.form.button.return"/>
 

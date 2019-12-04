@@ -520,8 +520,8 @@
 		<property name="job" ref="job3" />
 	</bean>
 
-
 	<!-- /////////////////// MANDATORY DUTIES ///////////////////////// -->
+
 	<bean id="manDuty01" class="acme.entities.mandatoryDuties.MandatoryDuty">
 		<property name="title" value="Solventar problema impresora" />
 		<property name="dutyDescription" value="Solucionar problema evita funcionamiento de impresora" />
@@ -543,8 +543,8 @@
 		<property name="descriptor" ref="descriptor03" />
 	</bean>
 
-
 	<!-- /////////////////// AUDITORS ///////////////////////// -->
+
 	<bean name="auditor1UserAccount" class="acme.framework.entities.UserAccount">
 		<property name="username" value="auditor1" />
 		<property name="password" value="auditor1" />
@@ -603,8 +603,8 @@
 		<property name="userAccount" ref="auditor2UserAccount" />
 	</bean>
 
-
 	<!-- /////////////////// AUDITOR RECORDS ///////////////////////// -->
+
 	<bean name="auditRecord1" class="acme.entities.auditRecords.AuditRecord">
 		<property name="title" value="Audit Record 1 " />
 		<property name="creationMoment" value="2021/11/28 10:30" />
@@ -612,6 +612,7 @@
 		<property name="published" value="true" />
 		<property name="auditor" ref="auditor1Employer" />
 		<property name="job" ref="job3" />
+
 	</bean>
 
 	<bean name="auditRecord2" class="acme.entities.auditRecords.AuditRecord">
@@ -621,6 +622,7 @@
 		<property name="published" value="true" />
 		<property name="auditor" ref="auditor1Employer" />
 		<property name="job" ref="job4" />
+
 	</bean>
 
 	<bean name="auditRecord3" class="acme.entities.auditRecords.AuditRecord">
@@ -630,6 +632,7 @@
 		<property name="published" value="true" />
 		<property name="auditor" ref="auditor2Employer" />
 		<property name="job" ref="job5" />
+
 	</bean>
 
 

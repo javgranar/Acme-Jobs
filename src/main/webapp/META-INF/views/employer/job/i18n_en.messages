@@ -24,6 +24,7 @@ employer.job.label.accept = Accept
 employer.job.form.button.create = Create
 
 employer.job.form.button.return = Return
+employer.job.form.button.listAuditRecord = Audit Records of this Job
 
 employer.job.error.must-accept = Must accept 
 

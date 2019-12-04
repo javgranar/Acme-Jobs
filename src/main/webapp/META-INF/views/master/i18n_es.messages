@@ -86,6 +86,7 @@ master.menu.company-record.create = Crear registro de empresa
 master.menu.challenges = Retos
 master.menu.challenge.list = Mostrar retos
 
+master.menu.job.listActive = Mostrar trabajos activos
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
@@ -111,11 +112,18 @@ master.menu.employer= Empleador
 master.menu.job.listMine = Mostrar mis trabajos
 master.menu.job.listAll = Mostrar todos los trabajos (solo empleadores)
 
+master.menu.employer.application = Peticiones
+master.menu.application.list = Peticiones a mis trabajos
+
+###### worker################################################################
+master.menu.worker = Trabajador
+master.menu.application.list2 = Mis Peticiones
+
 ###### auditor ################################################################
 master.menu.auditor = Auditor
-master.menu.auditRecord.list = Registro de auditoría
-master.menu.job.list.auditorRecord = Trabajos para los que ha hecho un registro de auditoría
-master.menu.job.list.NoauditorRecord= Trabajos para los que no ha hecho un registro de auditoría
+master.menu.auditRecord.list =Mis registros de auditoría
+master.menu.job.list.auditorRecord = Trabajos para los que he hecho un registro de auditoría
+master.menu.job.list.NoauditorRecord= Trabajos para los que no he hecho un registro de auditoría
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Cuenta
